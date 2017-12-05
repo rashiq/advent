@@ -526,11 +526,8 @@ print sum([
 print sum([
   len(set(row)) == len(row)
   for row in
-  map(
-    lambda x: map(
-      lambda y: ''.join(sorted(y)),
-      x.split()
-    ),
-    passphrases.splitlines()
-  )
+  [
+    [''.join(sorted(y)) for y in x.split()]
+    for x in passphrases.splitlines()
+  ]
 ])
