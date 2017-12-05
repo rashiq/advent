@@ -1111,6 +1111,5 @@ while index >= 0 and index < len(jumps):
   jumps[index] = jump + (-1 if jump >= 3 else 1)
   index += jump
   counter += 1
-  print index
 
 print counter
